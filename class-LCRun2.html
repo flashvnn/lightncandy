@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class LCRun2</title>
+
+	<script type="text/javascript" src="resources/combined.js?1288419929"></script>
+	<script type="text/javascript" src="elementlist.js?3628562697"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/bootstrap.min.css?260161822" />
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?2015443609" />
+
+</head>
+
+<body>
+	<div id="navigation" class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a href="index.html" class="brand">Overview</a>
+				<div class="nav-collapse">
+					<ul class="nav">
+						<li>
+							<a href="package-LightnCandy.html" title="Summary of LightnCandy"><span>Package</span></a>
+						</li>
+						<li class="active">
+<span>Class</span>						</li>
+
+						<li class="divider-vertical"></li>
+
+						<li>
+							<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+						</li>
+
+
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="left">
+	<div id="menu">
+		<form id="search" class="form-search">
+			<input type="hidden" name="cx" value="" />
+			<input type="hidden" name="ie" value="UTF-8" />
+			<input type="text" name="q" class="search-query" placeholder="Search" />
+		</form>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-LightnCandy.html">LightnCandy</a>
+						</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-LCRun2.html">LCRun2</a></li>
+				<li><a href="class-LightnCandy.html">LightnCandy</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class LCRun2</h1>
+
+
+	<div class="description">
+	
+<p>LightnCandy static class for compiled template runtime methods.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		
+		<b>Package:</b> <a href="package-LightnCandy.html">LightnCandy</a><br />
+
+				<b>Author:</b>
+				Zordius &lt;<a
+href="mailto:zordius&#64;yahoo-inc.com">zordius&#64;<!---->yahoo-inc.com</a>&gt;<br />
+		<b>Located at</b> <a href="source-class-LCRun2.html#1337-1777" title="Go to source code">lightncandy.php</a><br />
+	</div>
+
+
+
+		<h2>Methods summary</h2>
+		<table class="summary table table-bordered table-striped" id="methods">
+		<tr data-order="ifvar" id="_ifvar">
+
+			<td class="attributes"><code>
+				 public static
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_ifvar">#</a>
+			<code><a href="source-class-LCRun2.html#1341-1364" title="Go to source code">ifvar</a>( <span>array <var>$var</var></span>, <span>array <var>$cx</var></span>, <span>array <var>$in</var></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method for {{#if var}}.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method for {{#if var}}.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$var</var></dt>
+						<dd><code>array</code><br>$var variable name to be tested</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Return true when the value is not null nor false.<br />
+					</div>
+
+
+					<h4>Expect</h4>
+					<div class="list">
+							false when input Array('a'), Array(), Array()<br />
+							false when input Array('a'), Array(), Array('a' =&gt; null)<br />
+							false when input Array('a'), Array(), Array('a' =&gt; 0)<br />
+							false when input Array('a'), Array(), Array('a' =&gt; false)<br />
+							true when input Array('a'), Array(), Array('a' =&gt; true)<br />
+							true when input Array('a'), Array(), Array('a' =&gt; 1)<br />
+							false when input Array('a'), Array(), Array('a' =&gt; '')<br />
+							false when input Array('a'), Array(), Array('a' =&gt; Array())<br />
+							true when input Array('a'), Array(), Array('a' =&gt; Array(''))<br />
+							true when input Array('a'), Array(), Array('a' =&gt; Array(0))<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="ifv" id="_ifv">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_ifv">#</a>
+			<code><a href="source-class-LCRun2.html#1366-1404" title="Go to source code">ifv</a>( <span>array <var>$var</var></span>, <span>array <var>$cx</var></span>, <span>array <var>$in</var></span>, <span>function <var>$truecb</var></span>, <span>function <var>$falsecb</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method for {{#if var}} when {{../var}} used.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method for {{#if var}} when {{../var}} used.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$var</var></dt>
+						<dd><code>array</code><br>$var variable name to be tested</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+						<dt><var>$truecb</var></dt>
+						<dd><code>function</code><br>$truecb callback function when test result is true</dd>
+						<dt><var>$falsecb</var></dt>
+						<dd><code>function</code><br>$falsecb callback function when test result is false</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The rendered string of the section<br />
+					</div>
+
+
+					<h4>Expect</h4>
+					<div class="list">
+							'' when input Array('a'), Array('scopes' =&gt; Array()), Array(), function ()
+{return 'Y';}<br />
+							'Y' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt; 1),
+function () {return 'Y';}<br />
+							'N' when input Array('a'), Array('scopes' =&gt; Array()), Array(), function ()
+{return 'Y';}, function () {return 'N';}<br />
+							'N' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt; null),
+function () {return 'Y';}, function () {return 'N';}<br />
+							'N' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt;
+false), function () {return 'Y';}, function () {return 'N';}<br />
+							'N' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt; ''),
+function () {return 'Y';}, function () {return 'N';}<br />
+							'N' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt;
+Array()), function () {return 'Y';}, function () {return 'N';}<br />
+							'N' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt; 0),
+function () {return 'Y';}, function () {return 'N';}<br />
+							'Y' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt;
+Array(0)), function () {return 'Y';}, function () {return 'N';}<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="unl" id="_unl">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_unl">#</a>
+			<code><a href="source-class-LCRun2.html#1406-1427" title="Go to source code">unl</a>( <span>array <var>$var</var></span>, <span>array <var>$cx</var></span>, <span>array <var>$in</var></span>, <span>mixed <var>$truecb</var></span>, <span>mixed <var>$falsecb</var> = <span class="php-keyword1">null</span></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method for {{$unless var}} when {{../var}} used.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method for {{$unless var}} when {{../var}} used.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$var</var></dt>
+						<dd><code>array</code><br>$var variable name to be tested</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+						<dt><var>$truecb</var></dt>
+						<dd></dd>
+						<dt><var>$falsecb</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>Return rendered string when the value is not null nor false.<br />
+					</div>
+
+
+					<h4>Expect</h4>
+					<div class="list">
+							'Y' when input Array('a'), Array('scopes' =&gt; Array()), Array(), function ()
+{return 'Y';}<br />
+							'' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt; 1),
+function () {return 'Y';}<br />
+							'Y' when input Array('a'), Array('scopes' =&gt; Array()), Array(), function ()
+{return 'Y';}, function () {return 'N';}<br />
+							'Y' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt; null),
+function () {return 'Y';}, function () {return 'N';}<br />
+							'Y' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt;
+false), function () {return 'Y';}, function () {return 'N';}<br />
+							'Y' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt; ''),
+function () {return 'Y';}, function () {return 'N';}<br />
+							'Y' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt;
+Array()), function () {return 'Y';}, function () {return 'N';}<br />
+							'Y' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt; 0),
+function () {return 'Y';}, function () {return 'N';}<br />
+							'N' when input Array('a'), Array('scopes' =&gt; Array()), Array('a' =&gt;
+Array(0)), function () {return 'Y';}, function () {return 'N';}<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isec" id="_isec">
+
+			<td class="attributes"><code>
+				 public static
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isec">#</a>
+			<code><a href="source-class-LCRun2.html#1429-1447" title="Go to source code">isec</a>( <span>array <var>$var</var></span>, <span>array <var>$cx</var></span>, <span>array <var>$in</var></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method for {{^var}} inverted section.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method for {{^var}} inverted section.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$var</var></dt>
+						<dd><code>array</code><br>$var variable name to be tested</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>boolean</code><br>Return true when the value is not null nor false.<br />
+					</div>
+
+
+					<h4>Expect</h4>
+					<div class="list">
+							true when input Array('a'), Array(), Array()<br />
+							false when input Array('a'), Array(), Array('a' =&gt; 0)<br />
+							true when input Array('a'), Array(), Array('a' =&gt; false)<br />
+							false when input Array('a'), Array(), Array('a' =&gt; 'false')<br />
+							true when input Array('a'), Array(), Array('a' =&gt; null)<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="val" id="_val">
+
+			<td class="attributes"><code>
+				 public static
+				mixed
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_val">#</a>
+			<code><a href="source-class-LCRun2.html#1449-1520" title="Go to source code">val</a>( <span>array <var>$var</var></span>, <span>array <var>$cx</var></span>, <span>array <var>$in</var></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method to get input value.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method to get input value.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$var</var></dt>
+						<dd><code>array</code><br>$var variable name to get the raw value</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>mixed</code><br>The raw value of the specified variable<br />
+					</div>
+
+
+					<h4>Expect</h4>
+					<div class="list">
+							Array() when input Array(null), Array(), Array()<br />
+							Array('a') when input Array(null), Array(), Array('a')<br />
+							null when input Array('a'), Array(), Array()<br />
+							'a' when input Array('"a"'), Array(), Array()<br />
+							'a' when input Array('@index'), Array('sp_vars' =&gt; Array('index' =&gt; 'a')),
+Array()<br />
+							'b' when input Array('@key'), Array('sp_vars' =&gt; Array('key' =&gt; 'b')),
+Array()<br />
+							0 when input Array('a'), Array(), Array('a' =&gt; 0)<br />
+							false when input Array('a'), Array(), Array('a' =&gt; false)<br />
+							null when input Array('a','b'), Array(), Array('a' =&gt; 0)<br />
+							null when input Array('a','b'), Array(), Array()<br />
+							'Q' when input Array('a','b'), Array(), Array('a' =&gt; Array('b' =&gt; 'Q'))<br />
+							'' when input Array(1), Array('scopes' =&gt; Array()), Array()<br />
+							'Y' when input Array(1), Array('scopes' =&gt; Array('Y')), Array()<br />
+							null when input Array(1, 'a'), Array('scopes' =&gt; Array('Y')), Array()<br />
+							'q' when input Array(1, 'a'), Array('scopes' =&gt; Array(Array('a' =&gt; 'q'))),
+Array()<br />
+							'o' when input Array(2, 'a'), Array('scopes' =&gt; Array(Array('a' =&gt; 'o'),
+Array('a' =&gt; 'p'))), Array()<br />
+							'x' when input Array(3), Array('scopes' =&gt; Array('x', Array('a' =&gt; 'q'),
+Array('b' =&gt; 'r'))), Array()<br />
+							'o' when input Array(3, 'c'), Array('scopes' =&gt; Array(Array('c' =&gt; 'o'),
+Array('a' =&gt; 'q'), Array('b' =&gt; 'r'))), Array()<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="raw" id="_raw">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_raw">#</a>
+			<code><a href="source-class-LCRun2.html#1522-1576" title="Go to source code">raw</a>( <span>array <var>$var</var></span>, <span>array <var>$cx</var></span>, <span>array <var>$in</var></span>, <span>boolean <var>$loop</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method for {{{var}}} .</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method for {{{var}}} .</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$var</var></dt>
+						<dd><code>array</code><br>$var variable name to get the raw value</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+						<dt><var>$loop</var></dt>
+						<dd><code>boolean</code><br>$loop true when in loop</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The raw value of the specified variable<br />
+					</div>
+
+
+					<h4>Expect</h4>
+					<div class="list">
+							true when input Array(null), Array('flags' =&gt; Array('jstrue' =&gt; 0)), true<br />
+							'true' when input Array(null), Array('flags' =&gt; Array('jstrue' =&gt; 1)),
+true<br />
+							'' when input Array(null), Array('flags' =&gt; Array('jstrue' =&gt; 0)), false<br />
+							'' when input Array(null), Array('flags' =&gt; Array('jstrue' =&gt; 1)), false<br />
+							'false' when input Array(null), Array('flags' =&gt; Array('jstrue' =&gt; 1)),
+false, true<br />
+							Array('a', 'b') when input Array(null), Array('flags' =&gt; Array('jstrue' =&gt;
+1, 'jsobj' =&gt; 0)), Array('a', 'b')<br />
+							'a,b' when input Array(null), Array('flags' =&gt; Array('jstrue' =&gt; 1,
+'jsobj' =&gt; 1)), Array('a', 'b')<br />
+							'[object Object]' when input Array(null), Array('flags' =&gt; Array('jstrue'
+=&gt; 1, 'jsobj' =&gt; 1)), Array('a', 'c' =&gt; 'b')<br />
+							'[object Object]' when input Array(null), Array('flags' =&gt; Array('jstrue'
+=&gt; 1, 'jsobj' =&gt; 1)), Array('c' =&gt; 'b')<br />
+							'a,true' when input Array(null), Array('flags' =&gt; Array('jstrue' =&gt; 1,
+'jsobj' =&gt; 1)), Array('a', true)<br />
+							'a,1' when input Array(null), Array('flags' =&gt; Array('jstrue' =&gt; 0,
+'jsobj' =&gt; 1)), Array('a', true)<br />
+							'a,' when input Array(null), Array('flags' =&gt; Array('jstrue' =&gt; 0, 'jsobj'
+=&gt; 1)), Array('a', false)<br />
+							'a,false' when input Array(null), Array('flags' =&gt; Array('jstrue' =&gt; 1,
+'jsobj' =&gt; 1)), Array('a', false)<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="enc" id="_enc">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_enc">#</a>
+			<code><a href="source-class-LCRun2.html#1578-1593" title="Go to source code">enc</a>( <span>array <var>$var</var></span>, <span>array <var>$cx</var></span>, <span>array <var>$in</var></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method for {{var}} .</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method for {{var}} .</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$var</var></dt>
+						<dd><code>array</code><br>$var variable name to get the htmlencoded value</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The htmlencoded value of the specified variable<br />
+					</div>
+
+
+					<h4>Expect</h4>
+					<div class="list">
+							'a' when input Array(null), Array(), 'a'<br />
+							'a&amp;b' when input Array(null), Array(), 'a&amp;b'<br />
+							'a'b' when input Array(null), Array(), 'a\'b'<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="encq" id="_encq">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_encq">#</a>
+			<code><a href="source-class-LCRun2.html#1595-1610" title="Go to source code">encq</a>( <span>array <var>$var</var></span>, <span>array <var>$cx</var></span>, <span>array <var>$in</var></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method for {{var}} , and deal with single quote to same
+as handlebars.js .</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method for {{var}} , and deal with single quote to same
+as handlebars.js .</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$var</var></dt>
+						<dd><code>array</code><br>$var variable name to get the htmlencoded value</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The htmlencoded value of the specified variable<br />
+					</div>
+
+
+					<h4>Expect</h4>
+					<div class="list">
+							'a' when input Array(null), Array(), 'a'<br />
+							'a&amp;b' when input Array(null), Array(), 'a&amp;b'<br />
+							'a'b' when input Array(null), Array(), 'a\'b'<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="sec" id="_sec">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_sec">#</a>
+			<code><a href="source-class-LCRun2.html#1612-1689" title="Go to source code">sec</a>( <span>array <var>$var</var></span>, <span>array <var>&amp; $cx</var></span>, <span>array <var>$in</var></span>, <span>boolean <var>$each</var></span>, <span>function <var>$cb</var></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method for {{#var}} section.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method for {{#var}} section.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$var</var></dt>
+						<dd><code>array</code><br>$var variable name for section</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+						<dt><var>$each</var></dt>
+						<dd><code>boolean</code><br>$each true when rendering #each</dd>
+						<dt><var>$cb</var></dt>
+						<dd><code>function</code><br>$cb callback function to render child context</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The rendered string of the section<br />
+					</div>
+
+
+					<h4>Expect</h4>
+					<div class="list">
+							'' when input Array(null), Array(), false, false, function () {return 'A';}<br />
+							'' when input Array(null), Array(), null, false, function () {return 'A';}<br />
+							'A' when input Array(null), Array(), true, false, function () {return 'A';}<br />
+							'A' when input Array(null), Array(), 0, false, function () {return 'A';}<br />
+							'-a=' when input Array(null), Array(), Array('a'), false, function ($c, $i)
+{return "-$i=";}<br />
+							'-a=-b=' when input Array(null), Array(), Array('a', 'b'), false, function ($c,
+$i) {return "-$i=";}<br />
+							'' when input Array(null), Array(), 'abc', true, function ($c, $i) {return
+"-$i=";}<br />
+							'-b=' when input Array(null), Array(), Array('a' =&gt; 'b'), true, function ($c,
+$i) {return "-$i=";}<br />
+							'' when input Array('b'), Array(), Array('a' =&gt; 'b'), true, function ($c, $i)
+{return "-{$i['a']}=";}<br />
+							0 when input Array('a'), Array(), Array('a' =&gt; 'b'), false, function ($c, $i)
+{return count($i);}<br />
+							'1' when input Array('a'), Array(), Array('a' =&gt; 1), false, function ($c, $i)
+{return print_r($i, true);}<br />
+							'0' when input Array('a'), Array(), Array('a' =&gt; 0), false, function ($c, $i)
+{return print_r($i, true);}<br />
+							'{<a href="&quot;c&quot;}'">b</a> when input Array('a'), Array(), Array('a'
+=&gt; Array('b' =&gt; 'c')), false, function ($c, $i) {return json_encode($i);}<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="wi" id="_wi">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_wi">#</a>
+			<code><a href="source-class-LCRun2.html#1691-1715" title="Go to source code">wi</a>( <span>array <var>$var</var></span>, <span>array <var>&amp; $cx</var></span>, <span>array <var>$in</var></span>, <span>function <var>$cb</var></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method for {{#with var}} .</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method for {{#with var}} .</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$var</var></dt>
+						<dd><code>array</code><br>$var variable name for section</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+						<dt><var>$cb</var></dt>
+						<dd><code>function</code><br>$cb callback function to render child context</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The rendered string of the token<br />
+					</div>
+
+
+					<h4>Expect</h4>
+					<div class="list">
+							'' when input Array(null), Array(), false, function () {return 'A';}<br />
+							'' when input Array(null), Array(), null, function () {return 'A';}<br />
+							'-Array=' when input Array(null), Array(), Array('a' =&gt; 'b'), function ($c,
+$i) {return "-$i=";}<br />
+							'-b=' when input Array('a'), Array(), Array('a' =&gt; 'b'), function ($c, $i)
+{return "-$i=";}<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="ch" id="_ch">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_ch">#</a>
+			<code><a href="source-class-LCRun2.html#1717-1748" title="Go to source code">ch</a>( <span>string <var>$ch</var></span>, <span>array <var>$vars</var></span>, <span>string <var>$op</var></span>, <span>array <var>&amp; $cx</var></span>, <span>array <var>$in</var></span>, <span>boolean <var>$named</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method for custom helpers.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method for custom helpers.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$ch</var></dt>
+						<dd><code>string</code><br>$ch the name of custom helper to be executed</dd>
+						<dt><var>$vars</var></dt>
+						<dd><code>array</code><br>$vars variable names for helpers</dd>
+						<dt><var>$op</var></dt>
+						<dd><code>string</code><br>$op the name of variable resolver. should be one of: 'raw', 'enc', or 'encq'.</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+						<dt><var>$named</var></dt>
+						<dd><code>boolean</code><br>$named input arguments are named</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The rendered string of the token<br />
+					</div>
+
+
+					<h4>Expect</h4>
+					<div class="list">
+							'=-=' when input 'a', Array(Array(null)), 'raw', Array('helpers' =&gt; Array('a'
+=&gt; function ($i) {return "=$i=";})), '-'<br />
+							'=&amp;=' when input 'a', Array(Array(null)), 'enc', Array('helpers' =&gt;
+Array('a' =&gt; function ($i) {return "=$i=";})), '&amp;'<br />
+							'='=' when input 'a', Array(Array(null)), 'encq', Array('helpers' =&gt;
+Array('a' =&gt; function ($i) {return "=$i=";})), '\''<br />
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="bch" id="_bch">
+
+			<td class="attributes"><code>
+				 public static
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_bch">#</a>
+			<code><a href="source-class-LCRun2.html#1750-1776" title="Go to source code">bch</a>( <span>string <var>$ch</var></span>, <span>array <var>$vars</var></span>, <span>array <var>&amp; $cx</var></span>, <span>array <var>$in</var></span>, <span>function <var>$cb</var></span> )</code>
+
+			<div class="description short">
+				
+<p>LightnCandy runtime method for block custom helpers.</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>LightnCandy runtime method for block custom helpers.</p>
+
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$ch</var></dt>
+						<dd><code>string</code><br>$ch the name of custom helper to be executed</dd>
+						<dt><var>$vars</var></dt>
+						<dd><code>array</code><br>$vars variable names for helpers</dd>
+						<dt><var>$cx</var></dt>
+						<dd><code>array</code><br>$cx render time context</dd>
+						<dt><var>$in</var></dt>
+						<dd><code>array</code><br>$in input data with current scope</dd>
+						<dt><var>$cb</var></dt>
+						<dd><code>function</code><br>$cb callback function to render child context</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code>string</code><br>The rendered string of the token<br />
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		</table>
+
+
+
+		<h3>Magic methods summary</h3>
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		 API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</body>
+</html>
